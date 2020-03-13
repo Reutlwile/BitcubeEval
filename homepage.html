@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+    <link rel="stylesheet" href="homestyles.css">   
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="login-page">
+    <div class="form">
+		<form id="pro" class="profile-form">
+			<image src="bitcube_download.jpg" alt="BitCube" style="width: 100%;">
+				<h5>BitCube</h5>
+				<p class="title">Software Development Company</p>
+				<p>Free State, Bloemfontein</p>
+				<div style="margin: 24px 0;">
+					<button class="btn"><i class="fa fa-user"></i></button>
+					<button class="btn"><i class="fa fa-users"></i></button>
+				</div>
+				<button id="out" onclick="clickF">Logout</button>
+		</form>
+
+		<form id="log" class="login-form">
+			<h4>Login Page</h4>
+			<input id="add" type="text" placeholder="email address" title="Email should be at least 8 characters ex. xxxxxxxx@bitcube.com in small letters." required/>
+			<input id="word" type="password" placeholder="password" required/>
+			<button>Login</button>
+			<p class="message">Not Registered? <a href="#">Register</a></p>
+		</form>
+	</div>
+    </div>
+	<div id="message">
+		<h3>Password must contain the following:</h3>
+		<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+		<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+		<p id="number" class="invalid">A <b>number</b></p>
+		<p id="special" class="invalid">A <b>special character</b></p>
+		<p id="length" class="invalid">Minimum <b>6 characters</b></p>
+	</div>
+	<div id="mailmessage">
+		<h2>Email must contain the following:</h2>
+		<p id="minLength" class="invalid">Minimum <b>8 characters</b></p>
+		<p id="email1" class="invalid">@bitcube.com</p>
+    </div>
+	
+	
+		
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		// hiding the login page
+		var form = document.getElementById("log").style.display ="none";
+
+		// showing the login page
+		var btn1 = document.getElementById("out");
+		btn1.onclick = function(e) {
+			document.getElementById("log").style.display = "block";
+			document.getElementById("pro").style.display = "none";
+
+			e.preventDefault();
+		}
+
+	// Initialize all the email variables for the login page
+	var word1 = document.getElementById("add");
+	var emailLength = document.getElementById("minLength");
+	var address1 = document.getElementById("email1");
+	var word = document.getElementById("word");
+
+	// When user clicks on the login page email field, show the message
+	word1.onfocus = function() {
+		document.getElementById("mailmessage").style.display = "block";
+	}
+
+	// When the user clicks outside of the email field of the login page, hide the message
+	word1.onfocus = function() {
+		document.getElementById("mailmessage").style.display = "none";
+	}
+
+	// When the user starts to type something inside the email field
+	word1.onkeyup = function(){		
+		// Validate email length
+		if(word1.value.length >=8) {
+			emailLength.classList.remove("invalid");
+			emailLength.classList.add("valid");
+		} else {
+			emailLength.classList.remove("valid");
+			emailLength.classList.add("invalid");
+		}
+
+		// Validate email address
+		var mail = "@bitcube.com";
+		if(input.value.match(mail)) {
+			address1.classList.remove("invalid");
+			address1.classList.add("valid");
+		} else {
+			address1.classList.remove("valid");
+			address1.classList.add("invalid");
+		}
+	}
+
+	// When the user starts to type something inside the password field
+	word.onkeyup = function() {
+		// Validate lowercase letters
+		var lowerCaseLetters = /[a-z]/g;
+		if(word.value.match(lowerCaseLetters)) {  
+			letter.classList.remove("invalid");
+			letter.classList.add("valid");
+		} else {
+			letter.classList.remove("valid");
+			letter.classList.add("invalid");
+		}
+  
+	// Validate capital letters
+	var upperCaseLetters = /[A-Z]/g;
+	if(word.value.match(upperCaseLetters)) {  
+		capital.classList.remove("invalid");
+		capital.classList.add("valid");
+	} else {
+		capital.classList.remove("valid");
+		capital.classList.add("invalid");
+	}
+
+	// Validate numbers
+	var numbers = /[0-9]/g;
+	if(word.value.match(numbers)) {  
+		number.classList.remove("invalid");
+		number.classList.add("valid");
+	} else {
+		number.classList.remove("valid");
+		number.classList.add("invalid");
+	}
+	
+	// Validate special characters
+	var character = ["!", "@", "#", "$", "&", "*", "%"];
+	if(word.value.match(character[0])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else if(word.value.match(character[1])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else if(word.value.match(character[2])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else if(word.value.match(character[3])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else if(word.value.match(character[4])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else if(word.value.match(character[5])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else if(word.value.match(character[6])) {
+		special.classList.remove("invalid");
+		special.classList.add("valid");
+	} else {
+		special.classList.remove("valid");
+		special.classList.add("invalid");
+	}
+  
+	// Validate length
+	if(word.value.length >= 6) {
+		length.classList.remove("invalid");
+		length.classList.add("valid");
+	} else {
+		length.classList.remove("valid");
+		length.classList.add("invalid");
+	}
+}
+
+	
+	</script>
+	
+</body>
+
+
+
+
+</html>

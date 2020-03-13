@@ -1,0 +1,158 @@
+body{
+    background-image: url(Bitcube.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.form h1{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: darkgreen;
+}
+
+.login-page{
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.form{
+    position: relative;
+    z-index: 1;
+    background: darkcyan;
+    max-width: 360px;
+    margin: 40px auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: 1;
+    background: darkgrey;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: darkgreen;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover, .form button:active{
+    background: #43a047;
+}
+
+.form h4{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkgreen;
+  font-size: 18px;
+}
+
+.form .message{
+    margin: 15px 0 0;
+    color: rgb(0, 4, 255);
+    font-size: 12px;
+}
+
+.form button:hover, .form button:active {
+  background: #43a047;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: aliceblue;
+  font-size: 12px;
+}
+
+.form .message a{
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.form .profile-form {
+  display: block;
+}
+
+.form .login_form {
+  display: none;
+}
+
+/* The message box is shown when the user clicks on the email field */
+#mailmessage {
+	display: none;
+	background: #f1f1f1;
+	color: #000;
+	position: relative;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+#mailmessage p {
+	padding: 10px 35px;
+	font-size: 18px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+/* Style .profile-form */
+.profile-form {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px; 
+  margin: auto;
+  text-align: center; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.btn {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn :hover {
+  background-color: royalblue;
+}
